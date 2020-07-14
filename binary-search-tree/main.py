@@ -16,14 +16,18 @@ class Node(object):
             return True
         return False
 
-    def print_tree(self, level=0):
-        preceding_space = "  " * level
+    def print_tree(self, type="inorder"):
+        getattr(self, f"{type}_print")()
+
+    def inorder_print(self, level=1):
+        if level == 1:
+            print("In Order Print:")
+        preceding_space = " " + ("-" * level) + " "
         print(f"{preceding_space}{self.value}")
         if self.left:
-            self.left.print_tree(level=level+1)
+            self.left.inorder_print(level=level+1)
         if self.right:
-            self.right.print_tree(level=level+1)
-
+            self.right.inorder_print(level=level+1)
 
 # Build up an example tree:
 
