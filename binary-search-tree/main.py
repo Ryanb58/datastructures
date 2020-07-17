@@ -18,6 +18,17 @@ class Node(object):
         print(f"Printing Tree {type}")
         getattr(self, f"{type}_print")()
 
+    def breathfirst_print(self, level=0):
+        """Print out nodes by level.
+
+        Pretty much a pretty print of the nodes.
+        """
+        if self.left:
+            self.left.breathfirst_print(level+1)
+        print((" " * 4 * level) + f"-> {self.value}")
+        if self.right:
+            self.right.breathfirst_print(level+1)
+
     def preorder_print(self):
         """Pre-Order Traversal"""
         print(f"{self.value}")
@@ -136,3 +147,5 @@ bst_1.print_tree(type="preorder")
 bst_1.print_tree(type="inorder")
 
 bst_1.print_tree(type="postorder")
+
+bst_1.print_tree(type="breathfirst")
