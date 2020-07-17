@@ -30,10 +30,12 @@ Average Complexities:
  - Insert - O(log(n))
  - Search - O(log(n))
  - Delete - O(log(n))
+ - Any Print/Traversal - O(n)
 
 Worst Complexities:
  - Insert - O(h)
  - Search - O(h)
  - Delete - O(h)
-
+ - Any Print/Traversal - O(n)
+ 
  Where h is equal to the height of the tree.
