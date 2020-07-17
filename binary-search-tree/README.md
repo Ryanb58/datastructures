@@ -7,7 +7,15 @@ Here is an example from Wikipedia:
 ![Image of a BST](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png)
 
 
-Supported Operations:
+#### Use Cases:
+
+Search for a specific item in an array.
+
+As a database index(B-Tree).
+
+etc...
+
+#### Supported Operations:
  - Insert
  - Delete
  - Search
@@ -15,6 +23,17 @@ Supported Operations:
  - In-Order Traversal (left subtree -> node -> right subtree)
  - Post-Order Traversal (left subtree -> right subtree -> node)
 
-Types of BST:
 
-Unbalanced Tree.
+#### Computational Complexities:
+
+Average Complexities:
+ - Insert - O(log(n))
+ - Search - O(log(n))
+ - Delete - O(log(n))
+
+Worst Complexities:
+ - Insert - O(h)
+ - Search - O(h)
+ - Delete - O(h)
+
+ Where h is equal to the height of the tree.
